@@ -78,9 +78,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
+				<groupId>com.google.appengine</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
-				<version>1.9.60</version>
+				<version>1.9.9</version>
 				<configuration>
 					<project>moneyxexchange-218001</project>
 				</configuration>
