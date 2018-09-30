@@ -61,7 +61,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+		<dependency>
+      		<groupId>org.slf4j</groupId>
+      		<artifactId>jul-to-slf4j</artifactId>
+     		<scope>provided</scope>
+    	</dependency>
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
     		<groupId>org.json</groupId>
@@ -80,7 +84,7 @@
 			<plugin>
 			   <groupId>com.google.appengine</groupId>
 			   <artifactId>appengine-maven-plugin</artifactId>
-			   <version>1.9.65</version>
+			   <version>1.9.60</version>
 			</plugin>
 		</plugins>
 	</build>
