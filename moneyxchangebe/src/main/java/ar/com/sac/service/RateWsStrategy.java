@@ -22,7 +22,8 @@ public class RateWsStrategy implements RateStrategy{
 		RestTemplate restTemplate = new RestTemplate();
 		
 		// REVIEW esta api no nos permite obtener la cotizacion de forma correcta, dado que debemos pagar para que ello ocurra. 
-		// Es por eso que por el momento lo configuramos asi. 
+		// Es por eso que por el momento lo configuramos asi.
+		// TODO. Por el momento lo hardcodeamos. La idea es que estos elementos viajen desde el front.
 		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl("http://data.fixer.io/api/latest")
 		        .queryParam("base", "EUR")
 		        .queryParam("symbols", "USD")
@@ -40,7 +41,7 @@ public class RateWsStrategy implements RateStrategy{
 			JSONObject rates = (JSONObject) myObject.get("rates");
 			return new BigDecimal((Double)rates.get("USD"));
 		} catch (JSONException e) {
-			throw new RuntimeException("Problemas en la respuesta JSON: "+e.getMessage());
+			throw new RuntimeException("Problemas en la respuesta JSON: "+ e.getMessage());
 		}
 	}
 	
